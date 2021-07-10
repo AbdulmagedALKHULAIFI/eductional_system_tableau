@@ -1,0 +1,1536 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20212.21.0605.1023                               -->
+<workbook source-build='2021.2.0 (20212.21.0605.1023)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='EdStatsFootNote' inline='true' name='federated.17zqrrz0pbacxy109ntqg0vxuawd' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='EdStatsFootNote' name='textscan.0b5b12n0zbi7w61ee967z1dsvdd5'>
+            <connection class='textscan' directory='D:/docs/Data science/Tableau/eductional_system_tableau/Data' filename='EdStatsFootNote.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation join='left' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[EdStatsFootNote.csv].[SeriesCode]' />
+              <expression op='[EdStatsSeries.csv].[Series Code]' />
+            </expression>
+          </clause>
+          <relation join='left' type='join'>
+            <clause type='join'>
+              <expression op='='>
+                <expression op='[EdStatsCountry.csv].[Country Code]' />
+                <expression op='[EdStatsFootNote.csv].[CountryCode]' />
+              </expression>
+            </clause>
+            <relation join='left' type='join'>
+              <clause type='join'>
+                <expression op='='>
+                  <expression op='[EdStatsCountry.csv].[Country Code]' />
+                  <expression op='[EdStatsCountry-Series.csv].[CountryCode]' />
+                </expression>
+              </clause>
+              <relation connection='textscan.0b5b12n0zbi7w61ee967z1dsvdd5' name='EdStatsCountry.csv' table='[EdStatsCountry#csv]' type='table'>
+                <columns character-set='windows-1252' header='yes' locale='fr_FR' separator=','>
+                  <column datatype='string' name='Country Code' ordinal='0' />
+                  <column datatype='string' name='Short Name' ordinal='1' />
+                  <column datatype='string' name='Table Name' ordinal='2' />
+                  <column datatype='string' name='Long Name' ordinal='3' />
+                  <column datatype='string' name='2-alpha code' ordinal='4' />
+                  <column datatype='string' name='Currency Unit' ordinal='5' />
+                  <column datatype='string' name='Special Notes' ordinal='6' />
+                  <column datatype='string' name='Region' ordinal='7' />
+                  <column datatype='string' name='Income Group' ordinal='8' />
+                  <column datatype='string' name='WB-2 code' ordinal='9' />
+                  <column datatype='string' name='National accounts base year' ordinal='10' />
+                  <column datatype='integer' name='National accounts reference year' ordinal='11' />
+                  <column datatype='string' name='SNA price valuation' ordinal='12' />
+                  <column datatype='string' name='Lending category' ordinal='13' />
+                  <column datatype='string' name='Other groups' ordinal='14' />
+                  <column datatype='string' name='System of National Accounts' ordinal='15' />
+                  <column datatype='string' name='Alternative conversion factor' ordinal='16' />
+                  <column datatype='string' name='PPP survey year' ordinal='17' />
+                  <column datatype='string' name='Balance of Payments Manual in use' ordinal='18' />
+                  <column datatype='string' name='External debt Reporting status' ordinal='19' />
+                  <column datatype='string' name='System of trade' ordinal='20' />
+                  <column datatype='string' name='Government Accounting concept' ordinal='21' />
+                  <column datatype='string' name='IMF data dissemination standard' ordinal='22' />
+                  <column datatype='integer' name='Latest population census' ordinal='23' />
+                  <column datatype='string' name='Latest household survey' ordinal='24' />
+                  <column datatype='string' name='Source of most recent Income and expenditure data' ordinal='25' />
+                  <column datatype='string' name='Vital registration complete' ordinal='26' />
+                  <column datatype='string' name='Latest agricultural census' ordinal='27' />
+                  <column datatype='integer' name='Latest industrial data' ordinal='28' />
+                  <column datatype='integer' name='Latest trade data' ordinal='29' />
+                  <column datatype='integer' name='Latest water withdrawal data' ordinal='30' />
+                </columns>
+              </relation>
+              <relation connection='textscan.0b5b12n0zbi7w61ee967z1dsvdd5' name='EdStatsCountry-Series.csv' table='[EdStatsCountry-Series#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='fr_FR' separator=','>
+                  <column datatype='string' name='CountryCode' ordinal='0' />
+                  <column datatype='string' name='SeriesCode' ordinal='1' />
+                  <column datatype='string' name='DESCRIPTION' ordinal='2' />
+                  <column datatype='string' name='F4' ordinal='3' />
+                </columns>
+              </relation>
+            </relation>
+            <relation connection='textscan.0b5b12n0zbi7w61ee967z1dsvdd5' name='EdStatsFootNote.csv' table='[EdStatsFootNote#csv]' type='table'>
+              <columns character-set='UTF-8' header='yes' locale='fr_FR' separator=','>
+                <column datatype='string' name='CountryCode' ordinal='0' />
+                <column datatype='string' name='SeriesCode' ordinal='1' />
+                <column datatype='string' name='Year' ordinal='2' />
+                <column datatype='string' name='DESCRIPTION' ordinal='3' />
+                <column datatype='string' name='F5' ordinal='4' />
+              </columns>
+            </relation>
+          </relation>
+          <relation connection='textscan.0b5b12n0zbi7w61ee967z1dsvdd5' name='EdStatsSeries.csv' table='[EdStatsSeries#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='fr_FR' separator=','>
+              <column datatype='string' name='Series Code' ordinal='0' />
+              <column datatype='string' name='Topic' ordinal='1' />
+              <column datatype='string' name='Indicator Name' ordinal='2' />
+              <column datatype='string' name='Short definition' ordinal='3' />
+              <column datatype='string' name='Long definition' ordinal='4' />
+              <column datatype='string' name='Unit of measure' ordinal='5' />
+              <column datatype='string' name='Periodicity' ordinal='6' />
+              <column datatype='string' name='Base Period' ordinal='7' />
+              <column datatype='string' name='Other notes' ordinal='8' />
+              <column datatype='string' name='Aggregation method' ordinal='9' />
+              <column datatype='string' name='Limitations and exceptions' ordinal='10' />
+              <column datatype='string' name='Notes from original source' ordinal='11' />
+              <column datatype='string' name='General comments' ordinal='12' />
+              <column datatype='string' name='Source' ordinal='13' />
+              <column datatype='string' name='Statistical concept and methodology' ordinal='14' />
+              <column datatype='string' name='Development relevance' ordinal='15' />
+              <column datatype='string' name='Related source links' ordinal='16' />
+              <column datatype='string' name='Other web links' ordinal='17' />
+              <column datatype='string' name='Related indicators' ordinal='18' />
+              <column datatype='string' name='License Type' ordinal='19' />
+              <column datatype='string' name='F21' ordinal='20' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation join='left' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[EdStatsFootNote.csv].[SeriesCode]' />
+              <expression op='[EdStatsSeries.csv].[Series Code]' />
+            </expression>
+          </clause>
+          <relation join='left' type='join'>
+            <clause type='join'>
+              <expression op='='>
+                <expression op='[EdStatsCountry.csv].[Country Code]' />
+                <expression op='[EdStatsFootNote.csv].[CountryCode]' />
+              </expression>
+            </clause>
+            <relation join='left' type='join'>
+              <clause type='join'>
+                <expression op='='>
+                  <expression op='[EdStatsCountry.csv].[Country Code]' />
+                  <expression op='[EdStatsCountry-Series.csv].[CountryCode]' />
+                </expression>
+              </clause>
+              <relation connection='textscan.0b5b12n0zbi7w61ee967z1dsvdd5' name='EdStatsCountry.csv' table='[EdStatsCountry#csv]' type='table'>
+                <columns character-set='windows-1252' header='yes' locale='fr_FR' separator=','>
+                  <column datatype='string' name='Country Code' ordinal='0' />
+                  <column datatype='string' name='Short Name' ordinal='1' />
+                  <column datatype='string' name='Table Name' ordinal='2' />
+                  <column datatype='string' name='Long Name' ordinal='3' />
+                  <column datatype='string' name='2-alpha code' ordinal='4' />
+                  <column datatype='string' name='Currency Unit' ordinal='5' />
+                  <column datatype='string' name='Special Notes' ordinal='6' />
+                  <column datatype='string' name='Region' ordinal='7' />
+                  <column datatype='string' name='Income Group' ordinal='8' />
+                  <column datatype='string' name='WB-2 code' ordinal='9' />
+                  <column datatype='string' name='National accounts base year' ordinal='10' />
+                  <column datatype='integer' name='National accounts reference year' ordinal='11' />
+                  <column datatype='string' name='SNA price valuation' ordinal='12' />
+                  <column datatype='string' name='Lending category' ordinal='13' />
+                  <column datatype='string' name='Other groups' ordinal='14' />
+                  <column datatype='string' name='System of National Accounts' ordinal='15' />
+                  <column datatype='string' name='Alternative conversion factor' ordinal='16' />
+                  <column datatype='string' name='PPP survey year' ordinal='17' />
+                  <column datatype='string' name='Balance of Payments Manual in use' ordinal='18' />
+                  <column datatype='string' name='External debt Reporting status' ordinal='19' />
+                  <column datatype='string' name='System of trade' ordinal='20' />
+                  <column datatype='string' name='Government Accounting concept' ordinal='21' />
+                  <column datatype='string' name='IMF data dissemination standard' ordinal='22' />
+                  <column datatype='integer' name='Latest population census' ordinal='23' />
+                  <column datatype='string' name='Latest household survey' ordinal='24' />
+                  <column datatype='string' name='Source of most recent Income and expenditure data' ordinal='25' />
+                  <column datatype='string' name='Vital registration complete' ordinal='26' />
+                  <column datatype='string' name='Latest agricultural census' ordinal='27' />
+                  <column datatype='integer' name='Latest industrial data' ordinal='28' />
+                  <column datatype='integer' name='Latest trade data' ordinal='29' />
+                  <column datatype='integer' name='Latest water withdrawal data' ordinal='30' />
+                </columns>
+              </relation>
+              <relation connection='textscan.0b5b12n0zbi7w61ee967z1dsvdd5' name='EdStatsCountry-Series.csv' table='[EdStatsCountry-Series#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='fr_FR' separator=','>
+                  <column datatype='string' name='CountryCode' ordinal='0' />
+                  <column datatype='string' name='SeriesCode' ordinal='1' />
+                  <column datatype='string' name='DESCRIPTION' ordinal='2' />
+                  <column datatype='string' name='F4' ordinal='3' />
+                </columns>
+              </relation>
+            </relation>
+            <relation connection='textscan.0b5b12n0zbi7w61ee967z1dsvdd5' name='EdStatsFootNote.csv' table='[EdStatsFootNote#csv]' type='table'>
+              <columns character-set='UTF-8' header='yes' locale='fr_FR' separator=','>
+                <column datatype='string' name='CountryCode' ordinal='0' />
+                <column datatype='string' name='SeriesCode' ordinal='1' />
+                <column datatype='string' name='Year' ordinal='2' />
+                <column datatype='string' name='DESCRIPTION' ordinal='3' />
+                <column datatype='string' name='F5' ordinal='4' />
+              </columns>
+            </relation>
+          </relation>
+          <relation connection='textscan.0b5b12n0zbi7w61ee967z1dsvdd5' name='EdStatsSeries.csv' table='[EdStatsSeries#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='fr_FR' separator=','>
+              <column datatype='string' name='Series Code' ordinal='0' />
+              <column datatype='string' name='Topic' ordinal='1' />
+              <column datatype='string' name='Indicator Name' ordinal='2' />
+              <column datatype='string' name='Short definition' ordinal='3' />
+              <column datatype='string' name='Long definition' ordinal='4' />
+              <column datatype='string' name='Unit of measure' ordinal='5' />
+              <column datatype='string' name='Periodicity' ordinal='6' />
+              <column datatype='string' name='Base Period' ordinal='7' />
+              <column datatype='string' name='Other notes' ordinal='8' />
+              <column datatype='string' name='Aggregation method' ordinal='9' />
+              <column datatype='string' name='Limitations and exceptions' ordinal='10' />
+              <column datatype='string' name='Notes from original source' ordinal='11' />
+              <column datatype='string' name='General comments' ordinal='12' />
+              <column datatype='string' name='Source' ordinal='13' />
+              <column datatype='string' name='Statistical concept and methodology' ordinal='14' />
+              <column datatype='string' name='Development relevance' ordinal='15' />
+              <column datatype='string' name='Related source links' ordinal='16' />
+              <column datatype='string' name='Other web links' ordinal='17' />
+              <column datatype='string' name='Related indicators' ordinal='18' />
+              <column datatype='string' name='License Type' ordinal='19' />
+              <column datatype='string' name='F21' ordinal='20' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[2-alpha code]' value='[EdStatsCountry.csv].[2-alpha code]' />
+          <map key='[Aggregation method]' value='[EdStatsSeries.csv].[Aggregation method]' />
+          <map key='[Alternative conversion factor]' value='[EdStatsCountry.csv].[Alternative conversion factor]' />
+          <map key='[Balance of Payments Manual in use]' value='[EdStatsCountry.csv].[Balance of Payments Manual in use]' />
+          <map key='[Base Period]' value='[EdStatsSeries.csv].[Base Period]' />
+          <map key='[Country Code]' value='[EdStatsCountry.csv].[Country Code]' />
+          <map key='[CountryCode (EdStatsFootNote.csv)]' value='[EdStatsFootNote.csv].[CountryCode]' />
+          <map key='[CountryCode]' value='[EdStatsCountry-Series.csv].[CountryCode]' />
+          <map key='[Currency Unit]' value='[EdStatsCountry.csv].[Currency Unit]' />
+          <map key='[DESCRIPTION (EdStatsFootNote.csv)]' value='[EdStatsFootNote.csv].[DESCRIPTION]' />
+          <map key='[DESCRIPTION]' value='[EdStatsCountry-Series.csv].[DESCRIPTION]' />
+          <map key='[Development relevance]' value='[EdStatsSeries.csv].[Development relevance]' />
+          <map key='[External debt Reporting status]' value='[EdStatsCountry.csv].[External debt Reporting status]' />
+          <map key='[F21]' value='[EdStatsSeries.csv].[F21]' />
+          <map key='[F4]' value='[EdStatsCountry-Series.csv].[F4]' />
+          <map key='[F5]' value='[EdStatsFootNote.csv].[F5]' />
+          <map key='[General comments]' value='[EdStatsSeries.csv].[General comments]' />
+          <map key='[Government Accounting concept]' value='[EdStatsCountry.csv].[Government Accounting concept]' />
+          <map key='[IMF data dissemination standard]' value='[EdStatsCountry.csv].[IMF data dissemination standard]' />
+          <map key='[Income Group]' value='[EdStatsCountry.csv].[Income Group]' />
+          <map key='[Indicator Name]' value='[EdStatsSeries.csv].[Indicator Name]' />
+          <map key='[Latest agricultural census]' value='[EdStatsCountry.csv].[Latest agricultural census]' />
+          <map key='[Latest household survey]' value='[EdStatsCountry.csv].[Latest household survey]' />
+          <map key='[Latest industrial data]' value='[EdStatsCountry.csv].[Latest industrial data]' />
+          <map key='[Latest population census]' value='[EdStatsCountry.csv].[Latest population census]' />
+          <map key='[Latest trade data]' value='[EdStatsCountry.csv].[Latest trade data]' />
+          <map key='[Latest water withdrawal data]' value='[EdStatsCountry.csv].[Latest water withdrawal data]' />
+          <map key='[Lending category]' value='[EdStatsCountry.csv].[Lending category]' />
+          <map key='[License Type]' value='[EdStatsSeries.csv].[License Type]' />
+          <map key='[Limitations and exceptions]' value='[EdStatsSeries.csv].[Limitations and exceptions]' />
+          <map key='[Long Name]' value='[EdStatsCountry.csv].[Long Name]' />
+          <map key='[Long definition]' value='[EdStatsSeries.csv].[Long definition]' />
+          <map key='[National accounts base year]' value='[EdStatsCountry.csv].[National accounts base year]' />
+          <map key='[National accounts reference year]' value='[EdStatsCountry.csv].[National accounts reference year]' />
+          <map key='[Notes from original source]' value='[EdStatsSeries.csv].[Notes from original source]' />
+          <map key='[Other groups]' value='[EdStatsCountry.csv].[Other groups]' />
+          <map key='[Other notes]' value='[EdStatsSeries.csv].[Other notes]' />
+          <map key='[Other web links]' value='[EdStatsSeries.csv].[Other web links]' />
+          <map key='[PPP survey year]' value='[EdStatsCountry.csv].[PPP survey year]' />
+          <map key='[Periodicity]' value='[EdStatsSeries.csv].[Periodicity]' />
+          <map key='[Region]' value='[EdStatsCountry.csv].[Region]' />
+          <map key='[Related indicators]' value='[EdStatsSeries.csv].[Related indicators]' />
+          <map key='[Related source links]' value='[EdStatsSeries.csv].[Related source links]' />
+          <map key='[SNA price valuation]' value='[EdStatsCountry.csv].[SNA price valuation]' />
+          <map key='[Series Code]' value='[EdStatsSeries.csv].[Series Code]' />
+          <map key='[SeriesCode (EdStatsFootNote.csv)]' value='[EdStatsFootNote.csv].[SeriesCode]' />
+          <map key='[SeriesCode]' value='[EdStatsCountry-Series.csv].[SeriesCode]' />
+          <map key='[Short Name]' value='[EdStatsCountry.csv].[Short Name]' />
+          <map key='[Short definition]' value='[EdStatsSeries.csv].[Short definition]' />
+          <map key='[Source of most recent Income and expenditure data]' value='[EdStatsCountry.csv].[Source of most recent Income and expenditure data]' />
+          <map key='[Source]' value='[EdStatsSeries.csv].[Source]' />
+          <map key='[Special Notes]' value='[EdStatsCountry.csv].[Special Notes]' />
+          <map key='[Statistical concept and methodology]' value='[EdStatsSeries.csv].[Statistical concept and methodology]' />
+          <map key='[System of National Accounts]' value='[EdStatsCountry.csv].[System of National Accounts]' />
+          <map key='[System of trade]' value='[EdStatsCountry.csv].[System of trade]' />
+          <map key='[Table Name]' value='[EdStatsCountry.csv].[Table Name]' />
+          <map key='[Topic]' value='[EdStatsSeries.csv].[Topic]' />
+          <map key='[Unit of measure]' value='[EdStatsSeries.csv].[Unit of measure]' />
+          <map key='[Vital registration complete]' value='[EdStatsCountry.csv].[Vital registration complete]' />
+          <map key='[WB-2 code]' value='[EdStatsCountry.csv].[WB-2 code]' />
+          <map key='[Year]' value='[EdStatsFootNote.csv].[Year]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;windows-1252&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot; &quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[EdStatsCountry-Series.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot; &quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[EdStatsFootNote.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot; &quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[EdStatsSeries.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot; &quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country Code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country Code]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>Country Code</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Short Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Short Name]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>Short Name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Table Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Table Name]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>Table Name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Long Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Long Name]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>Long Name</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>2-alpha code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[2-alpha code]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>2-alpha code</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Currency Unit</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Currency Unit]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>Currency Unit</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Special Notes</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Special Notes]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>Special Notes</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Region]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>Region</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Income Group</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Income Group]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>Income Group</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WB-2 code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[WB-2 code]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>WB-2 code</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>National accounts base year</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[National accounts base year]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>National accounts base year</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>National accounts reference year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[National accounts reference year]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>National accounts reference year</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SNA price valuation</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SNA price valuation]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>SNA price valuation</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lending category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Lending category]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>Lending category</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Other groups</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Other groups]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>Other groups</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>System of National Accounts</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[System of National Accounts]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>System of National Accounts</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Alternative conversion factor</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Alternative conversion factor]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>Alternative conversion factor</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PPP survey year</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PPP survey year]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>PPP survey year</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Balance of Payments Manual in use</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Balance of Payments Manual in use]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>Balance of Payments Manual in use</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>External debt Reporting status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[External debt Reporting status]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>External debt Reporting status</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>System of trade</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[System of trade]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>System of trade</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Government Accounting concept</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Government Accounting concept]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>Government Accounting concept</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IMF data dissemination standard</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[IMF data dissemination standard]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>IMF data dissemination standard</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latest population census</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Latest population census]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>Latest population census</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latest household survey</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Latest household survey]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>Latest household survey</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Source of most recent Income and expenditure data</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Source of most recent Income and expenditure data]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>Source of most recent Income and expenditure data</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Vital registration complete</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Vital registration complete]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>Vital registration complete</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latest agricultural census</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Latest agricultural census]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>Latest agricultural census</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latest industrial data</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Latest industrial data]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>Latest industrial data</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latest trade data</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Latest trade data]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>Latest trade data</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latest water withdrawal data</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Latest water withdrawal data]</local-name>
+            <parent-name>[EdStatsCountry.csv]</parent-name>
+            <remote-alias>Latest water withdrawal data</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CountryCode</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CountryCode]</local-name>
+            <parent-name>[EdStatsCountry-Series.csv]</parent-name>
+            <remote-alias>CountryCode</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SeriesCode</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SeriesCode]</local-name>
+            <parent-name>[EdStatsCountry-Series.csv]</parent-name>
+            <remote-alias>SeriesCode</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DESCRIPTION</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DESCRIPTION]</local-name>
+            <parent-name>[EdStatsCountry-Series.csv]</parent-name>
+            <remote-alias>DESCRIPTION</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F4</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F4]</local-name>
+            <parent-name>[EdStatsCountry-Series.csv]</parent-name>
+            <remote-alias>F4</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CountryCode</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CountryCode (EdStatsFootNote.csv)]</local-name>
+            <parent-name>[EdStatsFootNote.csv]</parent-name>
+            <remote-alias>CountryCode</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SeriesCode</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SeriesCode (EdStatsFootNote.csv)]</local-name>
+            <parent-name>[EdStatsFootNote.csv]</parent-name>
+            <remote-alias>SeriesCode</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[EdStatsFootNote.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DESCRIPTION</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DESCRIPTION (EdStatsFootNote.csv)]</local-name>
+            <parent-name>[EdStatsFootNote.csv]</parent-name>
+            <remote-alias>DESCRIPTION</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F5</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F5]</local-name>
+            <parent-name>[EdStatsFootNote.csv]</parent-name>
+            <remote-alias>F5</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Series Code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Series Code]</local-name>
+            <parent-name>[EdStatsSeries.csv]</parent-name>
+            <remote-alias>Series Code</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Topic</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Topic]</local-name>
+            <parent-name>[EdStatsSeries.csv]</parent-name>
+            <remote-alias>Topic</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Indicator Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Indicator Name]</local-name>
+            <parent-name>[EdStatsSeries.csv]</parent-name>
+            <remote-alias>Indicator Name</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Short definition</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Short definition]</local-name>
+            <parent-name>[EdStatsSeries.csv]</parent-name>
+            <remote-alias>Short definition</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Long definition</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Long definition]</local-name>
+            <parent-name>[EdStatsSeries.csv]</parent-name>
+            <remote-alias>Long definition</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Unit of measure</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Unit of measure]</local-name>
+            <parent-name>[EdStatsSeries.csv]</parent-name>
+            <remote-alias>Unit of measure</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Periodicity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Periodicity]</local-name>
+            <parent-name>[EdStatsSeries.csv]</parent-name>
+            <remote-alias>Periodicity</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Base Period</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Base Period]</local-name>
+            <parent-name>[EdStatsSeries.csv]</parent-name>
+            <remote-alias>Base Period</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Other notes</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Other notes]</local-name>
+            <parent-name>[EdStatsSeries.csv]</parent-name>
+            <remote-alias>Other notes</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Aggregation method</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Aggregation method]</local-name>
+            <parent-name>[EdStatsSeries.csv]</parent-name>
+            <remote-alias>Aggregation method</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Limitations and exceptions</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Limitations and exceptions]</local-name>
+            <parent-name>[EdStatsSeries.csv]</parent-name>
+            <remote-alias>Limitations and exceptions</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Notes from original source</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Notes from original source]</local-name>
+            <parent-name>[EdStatsSeries.csv]</parent-name>
+            <remote-alias>Notes from original source</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>General comments</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[General comments]</local-name>
+            <parent-name>[EdStatsSeries.csv]</parent-name>
+            <remote-alias>General comments</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Source</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Source]</local-name>
+            <parent-name>[EdStatsSeries.csv]</parent-name>
+            <remote-alias>Source</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Statistical concept and methodology</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Statistical concept and methodology]</local-name>
+            <parent-name>[EdStatsSeries.csv]</parent-name>
+            <remote-alias>Statistical concept and methodology</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Development relevance</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Development relevance]</local-name>
+            <parent-name>[EdStatsSeries.csv]</parent-name>
+            <remote-alias>Development relevance</remote-alias>
+            <ordinal>55</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Related source links</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Related source links]</local-name>
+            <parent-name>[EdStatsSeries.csv]</parent-name>
+            <remote-alias>Related source links</remote-alias>
+            <ordinal>56</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Other web links</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Other web links]</local-name>
+            <parent-name>[EdStatsSeries.csv]</parent-name>
+            <remote-alias>Other web links</remote-alias>
+            <ordinal>57</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Related indicators</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Related indicators]</local-name>
+            <parent-name>[EdStatsSeries.csv]</parent-name>
+            <remote-alias>Related indicators</remote-alias>
+            <ordinal>58</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>License Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[License Type]</local-name>
+            <parent-name>[EdStatsSeries.csv]</parent-name>
+            <remote-alias>License Type</remote-alias>
+            <ordinal>59</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F21</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F21]</local-name>
+            <parent-name>[EdStatsSeries.csv]</parent-name>
+            <remote-alias>F21</remote-alias>
+            <ordinal>60</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[Country Code]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='string' name='[CountryCode (EdStatsFootNote.csv)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='string' name='[CountryCode]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='EdStatsCountry.csv' datatype='table' name='[__tableau_internal_object_id__].[EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='233' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;France&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='EdStatsCountry.csv' id='EdStatsCountry.csv_2C7E6E1BE71A4E299A2882E71275B6D1'>
+            <properties context=''>
+              <relation join='left' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='[EdStatsFootNote.csv].[SeriesCode]' />
+                    <expression op='[EdStatsSeries.csv].[Series Code]' />
+                  </expression>
+                </clause>
+                <relation join='left' type='join'>
+                  <clause type='join'>
+                    <expression op='='>
+                      <expression op='[EdStatsCountry.csv].[Country Code]' />
+                      <expression op='[EdStatsFootNote.csv].[CountryCode]' />
+                    </expression>
+                  </clause>
+                  <relation join='left' type='join'>
+                    <clause type='join'>
+                      <expression op='='>
+                        <expression op='[EdStatsCountry.csv].[Country Code]' />
+                        <expression op='[EdStatsCountry-Series.csv].[CountryCode]' />
+                      </expression>
+                    </clause>
+                    <relation connection='textscan.0b5b12n0zbi7w61ee967z1dsvdd5' name='EdStatsCountry.csv' table='[EdStatsCountry#csv]' type='table'>
+                      <columns character-set='windows-1252' header='yes' locale='fr_FR' separator=','>
+                        <column datatype='string' name='Country Code' ordinal='0' />
+                        <column datatype='string' name='Short Name' ordinal='1' />
+                        <column datatype='string' name='Table Name' ordinal='2' />
+                        <column datatype='string' name='Long Name' ordinal='3' />
+                        <column datatype='string' name='2-alpha code' ordinal='4' />
+                        <column datatype='string' name='Currency Unit' ordinal='5' />
+                        <column datatype='string' name='Special Notes' ordinal='6' />
+                        <column datatype='string' name='Region' ordinal='7' />
+                        <column datatype='string' name='Income Group' ordinal='8' />
+                        <column datatype='string' name='WB-2 code' ordinal='9' />
+                        <column datatype='string' name='National accounts base year' ordinal='10' />
+                        <column datatype='integer' name='National accounts reference year' ordinal='11' />
+                        <column datatype='string' name='SNA price valuation' ordinal='12' />
+                        <column datatype='string' name='Lending category' ordinal='13' />
+                        <column datatype='string' name='Other groups' ordinal='14' />
+                        <column datatype='string' name='System of National Accounts' ordinal='15' />
+                        <column datatype='string' name='Alternative conversion factor' ordinal='16' />
+                        <column datatype='string' name='PPP survey year' ordinal='17' />
+                        <column datatype='string' name='Balance of Payments Manual in use' ordinal='18' />
+                        <column datatype='string' name='External debt Reporting status' ordinal='19' />
+                        <column datatype='string' name='System of trade' ordinal='20' />
+                        <column datatype='string' name='Government Accounting concept' ordinal='21' />
+                        <column datatype='string' name='IMF data dissemination standard' ordinal='22' />
+                        <column datatype='integer' name='Latest population census' ordinal='23' />
+                        <column datatype='string' name='Latest household survey' ordinal='24' />
+                        <column datatype='string' name='Source of most recent Income and expenditure data' ordinal='25' />
+                        <column datatype='string' name='Vital registration complete' ordinal='26' />
+                        <column datatype='string' name='Latest agricultural census' ordinal='27' />
+                        <column datatype='integer' name='Latest industrial data' ordinal='28' />
+                        <column datatype='integer' name='Latest trade data' ordinal='29' />
+                        <column datatype='integer' name='Latest water withdrawal data' ordinal='30' />
+                      </columns>
+                    </relation>
+                    <relation connection='textscan.0b5b12n0zbi7w61ee967z1dsvdd5' name='EdStatsCountry-Series.csv' table='[EdStatsCountry-Series#csv]' type='table'>
+                      <columns character-set='UTF-8' header='yes' locale='fr_FR' separator=','>
+                        <column datatype='string' name='CountryCode' ordinal='0' />
+                        <column datatype='string' name='SeriesCode' ordinal='1' />
+                        <column datatype='string' name='DESCRIPTION' ordinal='2' />
+                        <column datatype='string' name='F4' ordinal='3' />
+                      </columns>
+                    </relation>
+                  </relation>
+                  <relation connection='textscan.0b5b12n0zbi7w61ee967z1dsvdd5' name='EdStatsFootNote.csv' table='[EdStatsFootNote#csv]' type='table'>
+                    <columns character-set='UTF-8' header='yes' locale='fr_FR' separator=','>
+                      <column datatype='string' name='CountryCode' ordinal='0' />
+                      <column datatype='string' name='SeriesCode' ordinal='1' />
+                      <column datatype='string' name='Year' ordinal='2' />
+                      <column datatype='string' name='DESCRIPTION' ordinal='3' />
+                      <column datatype='string' name='F5' ordinal='4' />
+                    </columns>
+                  </relation>
+                </relation>
+                <relation connection='textscan.0b5b12n0zbi7w61ee967z1dsvdd5' name='EdStatsSeries.csv' table='[EdStatsSeries#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='fr_FR' separator=','>
+                    <column datatype='string' name='Series Code' ordinal='0' />
+                    <column datatype='string' name='Topic' ordinal='1' />
+                    <column datatype='string' name='Indicator Name' ordinal='2' />
+                    <column datatype='string' name='Short definition' ordinal='3' />
+                    <column datatype='string' name='Long definition' ordinal='4' />
+                    <column datatype='string' name='Unit of measure' ordinal='5' />
+                    <column datatype='string' name='Periodicity' ordinal='6' />
+                    <column datatype='string' name='Base Period' ordinal='7' />
+                    <column datatype='string' name='Other notes' ordinal='8' />
+                    <column datatype='string' name='Aggregation method' ordinal='9' />
+                    <column datatype='string' name='Limitations and exceptions' ordinal='10' />
+                    <column datatype='string' name='Notes from original source' ordinal='11' />
+                    <column datatype='string' name='General comments' ordinal='12' />
+                    <column datatype='string' name='Source' ordinal='13' />
+                    <column datatype='string' name='Statistical concept and methodology' ordinal='14' />
+                    <column datatype='string' name='Development relevance' ordinal='15' />
+                    <column datatype='string' name='Related source links' ordinal='16' />
+                    <column datatype='string' name='Other web links' ordinal='17' />
+                    <column datatype='string' name='Related indicators' ordinal='18' />
+                    <column datatype='string' name='License Type' ordinal='19' />
+                    <column datatype='string' name='F21' ordinal='20' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='CountRegionCountries'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='EdStatsFootNote' name='federated.17zqrrz0pbacxy109ntqg0vxuawd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.17zqrrz0pbacxy109ntqg0vxuawd'>
+            <column datatype='string' name='[Country Code]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column datatype='string' name='[Region]' role='dimension' type='nominal' />
+            <column-instance column='[Country Code]' derivation='CountD' name='[ctd:Country Code:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Region]' derivation='None' name='[none:Region:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.17zqrrz0pbacxy109ntqg0vxuawd].[ctd:Country Code:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.17zqrrz0pbacxy109ntqg0vxuawd].[none:Region:nk]</rows>
+        <cols>[federated.17zqrrz0pbacxy109ntqg0vxuawd].[ctd:Country Code:qk]</cols>
+      </table>
+      <simple-id uuid='{BCE6C5E3-F5B5-48CD-9BB5-BD50704CAA11}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='EdStatsFootNote' name='federated.17zqrrz0pbacxy109ntqg0vxuawd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.17zqrrz0pbacxy109ntqg0vxuawd'>
+            <column datatype='string' name='[Indicator Name]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Long Name]' role='dimension' type='nominal' />
+            <column-instance column='[Indicator Name]' derivation='Count' name='[cnt:Indicator Name:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Indicator Name]' derivation='CountD' name='[ctd:Indicator Name:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Indicator Name]' derivation='None' name='[none:Indicator Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Long Name]' derivation='None' name='[none:Long Name:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.17zqrrz0pbacxy109ntqg0vxuawd].[none:Indicator Name:nk]'>
+            <groupfilter function='member' level='[none:Indicator Name:nk]' member='&quot;Youth literacy rate, population 15-24 years, male (\%)&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <computed-sort column='[federated.17zqrrz0pbacxy109ntqg0vxuawd].[none:Long Name:nk]' direction='DESC' using='[federated.17zqrrz0pbacxy109ntqg0vxuawd].[cnt:Indicator Name:qk]' />
+          <slices>
+            <column>[federated.17zqrrz0pbacxy109ntqg0vxuawd].[none:Indicator Name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.17zqrrz0pbacxy109ntqg0vxuawd].[none:Long Name:nk]</rows>
+        <cols>[federated.17zqrrz0pbacxy109ntqg0vxuawd].[ctd:Indicator Name:qk]</cols>
+      </table>
+      <simple-id uuid='{CDB84D7B-BC1D-4CD7-93C1-E6A828EE38C4}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='CountRegionCountries'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{15BB4A7B-83F4-4ED5-AF85-60C1F446FBD2}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='300'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{04158391-A8C6-4E82-B037-A15BC1491170}' />
+    </window>
+  </windows>
+</workbook>
